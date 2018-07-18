@@ -1,2 +1,2 @@
-#JS_Project
-javascript¸¦ °øºÎÇÏ±âÀ§ÇÑ °úÁ¤
+ï»¿#JS_Project
+javascriptë¥¼ ê³µë¶€í•˜ê¸°ìœ„í•œ ê³¼ì •
