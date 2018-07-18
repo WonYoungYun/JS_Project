@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello world!</title>
+</head>
+<body>
+    <h1><a href="page.html">HTML</a></h1>
+    <h2>hidden</h2>
+    <p>html에서는 보이지 않지만 submit시 서버로 어떤 값을 전송하기위해 hidden을 사용</p>
+    <form action="./hidden.html">
+        <input type="text" name="id">
+        <input type="hidden" name="hide" value="yun">
+        <input type="submit">
+    </form>
+
+
+    <h2>label</h2>
+    <p>label을 통해 어떠한 텍스트가 무언가의 이름이란 것을 알려줄 수 있다.</p>
+    <p>label의 for와 input의 id통해 레이블과 input을 엮을 수 있다.</p>
+    <p>텍스트를 누르면 input에 커서가 위치하게 된다.</p>
+    <p>label태그로 input 감싸줘도 똑같은 효과가 생긴다.</p>
+    <p>
+        <p><label for="id_txt">text</label>
+        <input id="id_txt" type="text" name="id" value="default"></p>
+        <p>
+        <label>textarea
+            <textarea></textarea>
+        </label>
+        </p>
+        <p>
+        <label>
+            <input type="checkbox" name="color" vlaue="green"> 초록색
+        </label>
+        </p>
+
+        
+    </p>
+</body>
+</html>
