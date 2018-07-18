@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS Project</title>
+</head>
+<body>
+    <h1><a href="page.html">HTML</a></h1>
+    <div>
+        <p>input을 통해 데이터를 입력 할 수 있다.</p>
+        <p>form을 통해 입력받은 데이터를 어디로 전송할지 정할 수 있다.</p>
+        <p>input의 name을 통해 어떠한 이름으로 데이터를 전송할지 정할 수 있다.</p>
+        <p>value를 통해 input default 값을 넣어 줄 수 있다</p>
+        <form action="./form2.html">
+            <p>아이디 : <input type="text" name="id" value="id"></p>
+            <p>비밀번호 : <input type="password" name="pw" value="pwd"></p>
+            <p>
+                textarea : <textarea cols="50" rows="2">default</textarea>
+            </p>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <h1>선택하기</h1>
+        <p>select와 option을 통해 선택할 수 있는 목록을 만든다. multiple을 통해 다중선택설정 가능</p>
+        <form action="./form.html">
+            <h2>단일 선택</h2>
+            <select name="color">
+                <option value="red">red</option>
+                <option value="black">black</option>
+                <option value="blue">blue</option>
+            </select>
+            <input type="submit">
+        </form>
+        <div>
+            <p>
+                <h2>Radio button</h2>
+                <p>radio버튼을 하나의 이름으로 묶어주면 버튼을 하나만 누를 수 있다.</p>
+                red : <input type="radio" name ="color" value="red">
+                black :<input type="radio" name ="color" value="black" checked>
+                blue : <input type="radio" name ="color" value="blue">
+            </p>
+            <p>
+                <h2>Checkbox button</h2>
+                <p>다중 선택을 할 수 있는 checkbox 생성</p>
+                95 : <input type="checkbox" name ="size" value="95">
+                100 :<input type="checkbox" name ="size" value="100" checked>
+                105 : <input type="checkbox" name ="size" value="105">
+
+                <p>checked를 통해 미리 선택할 수 있게 만들수 있다.</p>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
