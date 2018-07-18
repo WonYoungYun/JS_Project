@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="검색 엔진 최적화">
+    <title>JS Project</title>
+    <link rel="canonical" href="./searchEngine.html">
+    <style>
+        a{text-decoration:none};
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="page.html">HTML</a></h1>
+</header>
+<section>
+    <article>
+        <h2>검색엔진의 최적화</h2>
+        <a href="http://static.googleusercontent.com/media/www.google.com/ko//intl/ko/webmasters/docs/search-engine-optimization-starter-guide-ko.pdf" target="_blank" title=" 구글의 검색엔진 최적화 메뉴얼">구글의 검색엔진 최적화 메뉴얼</a>
+        <p>검색엔진에서 웹페이지가 좀더 잘보이게하기 위하여 검색엔진에 검색되기 쉽도록 최적화 해야한다.</p>
+        <p>html코드를 의미론적으로 잘쓰면 그것이 가장 좋은 최적화</p>
+        <p>검색엔진에 너무좋게 만들면 오히려 검색엔진이 스팸으로 취급하여 차단</p>
+        <p>검색엔진을 위한 것이 아닌 사용자를 위한 콘텐츠 작성</p>
+    </article>
+    <article>
+        <h2>검색엔진의 최적화를 위해</h2>
+        <ol>
+            <li>title은 head태그에 들어가야 한다.</li>
+            <li>meta태그의 description은 짧은 단락을 사용하는게 좋다.</li>
+            <li>이해하기 쉬운 URL은 컨텐츠의 내용을 전달하는데 좋다. (크롤링 하기 쉬워진다.)</li>
+            <li>link rel="canonical" 을 통해 이 웹페이지가 href로 지정한 웹페이지와 동일하다는 것을 알려주며, 검색하면 href를 보여줌 </li>
+            <li>301 리다이렉션을 설정(특정 html로 보낼 수 있다.)</li>
+            <li>사이트의 이동은 하이퍼텍스트를 이용하라.</li>
+        </ol>
+    </article>
+    <article>
+        <h2>image의 alt</h2>
+        <a href="searchEngine.html"><img src="images/dog.jpg" alt="멍멍이" width="10%"></a>
+        <p>alt를 이용해 이미지가 오류가 생겼을때 alt로 나오게 됨</p>
+    </article>   
+    <article>
+        <h2>robots.txt</h2>
+        <p>robots.txt로 검색엔진에 대한 각 웹사이트들의 설정을 확인 할 수 있다.</p>
+        <p>Disallow 되어있는것은 보호를 위한 정보들 하지만 robots.txt는 보안도구가 아니다</p>
+        <p>검색엔진이 웹사이트에 들어오고 robots.txt를 보고 robots.txt에 적힌 파일로 접근해 웹페이지들을 다운받고 분석한뒤 검색결과로 제공한다.</p>
+    </article>
+    <article>
+        <h2>페이지 랭크</h2>
+        <p>많은 웹사이트들이 가르키는 사이트가 있다면 같은 검색결과를 내놓아도 랭크가 높은 사이트를 우선으로 알려줌</p>
+        <p>많은 웹사이트들이 가르키는 사이트가 하나의 사이트를 가르키면 그 사이트의 랭크는 높게 측정된다.</p>
+        <p>더 많은 유입이 있을수록 페이지의 랭크가 올라가기 때문에 스팸이 많다. (대략적으로)</p>
+        <p>웹의 본질은 링크</p>
+    </article>
+</section>
+
+</body>
+</html>
