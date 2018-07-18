@@ -11,6 +11,7 @@
 </header>
 <section>
     <article>
+        <h2>새로운 제출 양식</h2>
         <form action="newhtml5.html">
             <input type="number" min="1" max="12" name="numv">
             <input type="date" name="datev"><br>
@@ -26,9 +27,37 @@
         </form>
         <p>입력하는 데이터의 타입을 강제로 지정한다.</p>
         <p>유효하지 않은 값을 입력하면 submit하지 않음</p>
-
+    </article>
+    <article>
+        <h2>새로운 속성</h2>
+        <form action="newhtml5.html" autocomplete="on">
+            <input type="text" name="id" placeholder="id를 입력하세요" autofocus>
+            <input type="password" name="pwd" autocomplete="off">
+            <input type="submit">
+        </form>
+        <p>autocomplete을 했을경우 전에 넣은 정보를 웹브라우저가 기억하고 다음에 입력할때 자동완성 해준다.</p>
+        <p>autocomplete="off"를 통해 자동완성하고 싶지 않은 정보의 자동완성기능을 해제 할 수 있다.</p>
+        <p>placeholder로 해당 input에 대한 배경글을 넣어 줄 수 있다.</p>
+        <p>autofocus로 웹페이지가 열렸을때 자동으로 커서가 input에 활성화 될수 있도록 해줄 수 있다.</p>
+    </article>
+    <article>
+        <h2>입력 값 체크</h2>
+        <form action="newhtml5.html">
+                <input type="text" name="id" placeholder="id를 입력하세요" required pattern="[a-zA-Z].+">
+                <input type="email" name="email" placeholder="email을 입력하세요">
+                <input type="submit">
+        </form>
+        <p>required속성을 주면 필수로 입력해야 한다.</p>
+        <p>하나의 input에 required속성을 주게 되면 다른 input은 입력을 하지 않아도 되는 선택을 가질수 있다.</p>
+        <p>pattern을 주고 정규표현식으로 input에 입력값을 체크 할 수 있다.</p>
+        <ol>
+            <li>[a-zA-Z] 알파벳만 입력 가능하다</li>
+            <li>[a-zA-Z]. 첫번째자리는 알파벳이어야 한다</li>
+            <li>[a-zA-Z].+ 첫번째자리는 알바벳이고 내용은 2자이상이어야 한다</li>
+            <li>[a-zA-Z].+[0-9] 첫번째자리는 알바벳이고 내용은 2자이상이어야 하며 끝자리는 숫자여야 한다.</li>
+        </ol>
+            <p>보안을 위한 기술이 절대 아니며 아닌 좀더 편리한 것을 제공하기 위한 기술이다.</p>
     </article>
 </section>
-
 </body>
 </html>
