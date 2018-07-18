@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello world!</title>
+</head>
+<body>
+    <h1><a href="page.html">HTML</a></h1>
+
+    <p>table로 table을 생성 border를 통해 테이블의 테두리를 설정가능</p>
+    <p>td를 이용하여 table의 내용을 만들 수 있다.</p>
+    <p>각각의 행을 tr(table row)태그로 묶어줘야 한다.</p>
+    <p>table은 thead와 tbody, tfoot로 나누어 구분하며 tfoot은 항상 표의 아래로 온다.</p>
+    <p>th를 통해 table 내용을 table의 헤딩으로 만들어 줄수 있다.</p><br>
+    
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th><th>성별</th><th>주소</th><th>번호</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td><td rowspan="2">남</td><td>부산</td><td>1</td>
+            </tr>
+            <tr>
+                <td>B</td><td>대구</td><td>2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3">합계</td><td>3</td>
+        </tfoot>
+    </table>    
+</body>
+</html>
