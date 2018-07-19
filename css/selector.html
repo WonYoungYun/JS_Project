@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        /*li{
+            color:red;
+            text-decoration:underline
+        }*/
+        ul li{
+            color:red;
+        }
+        #lecture>li{
+            border:1px solid red;
+        }
+        ul,ol{
+            background-color: powderblue;
+        }
+        #select{font-size:40px;
+        }
+        a:visited{
+            color:red;
+        }
+        a:link{
+            color:black;
+        }
+        a:hover{
+            color:yellow;
+        }
+        a:active{
+            color:green;
+        }
+        a:focus{
+            background-color: black;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>
+<section>
+    <article>
+        <h2>태그 선택자</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <p>style의 li가 선택자 color는 속성, red는 속성값, :은 속성과 속성값을 구분해주는 구분자 역활을 한다</p>
+        <p>;을 통해 Property들을 구분해주는 구분자 역활을 한다</p>
+    </article>
+    <article>
+        <h2>ID 선택자</h2>
+        <ul>
+            <li>HTML</li>
+            <li id="select">CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <p>
+            id라고 하는 이름의 속성을 사용하고 거기에다가 속성값을 주면 
+            그 속성값에 해당되는 태그를 css에서 선택할때 그 태그의 이름 앞에 #을 줘야한다
+        </p>
+    </article>
+    <article>
+        <h2>부모 자식 선택자</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="lecture">
+            <li>HTML</li>
+            <li>CSS
+                <ol>
+                    <li>selector</li>
+                    <li>declaration</li>
+                </ol>
+            </li>
+            <li>JavaScript</li>
+        </ol>
+        <p>>를 통해 바로 직계자손에게만 CSS효과를 적용시킬 수 있다.</p>
+        <a href="http://flukeout.github.io">선택자 게임</a>
+    </article>
+    <article>
+        <h2>가상 클래스 선택자</h2>
+        <a href="https://www.naver.com">방문함</a>
+        <a href="https://a.a">방문안함</a>
+        <p>:active로 마우스를 클릭하고 있을때 효과 적용</p>
+        <p>:hover로 마우스를 올려놓은 상태일때 효과 적용</p>
+        <p>우선 순위는 아래에 있을수록 높다</p>
+        <p>:visited 방문한 적이 있는 링크에 대한 효과적용(보안으로 인해 일부속성만 사용 가능하다)</p>
+        <p>:link 방문한 적이 없는 링크에 대한 효과 적용</p>
+        <p>:focus로 tab을 이용해 focus상태로 만들 수 있다.</p>
+    </article>
+</section>    
+
+</body>
+</html>

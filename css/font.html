@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        #rem1{color:red}
+        #px{font-size:16px;}
+        #rem{font-size:1rem;}
+        #colors{color:red;}
+        #RGB{color:rgb(255,0,255);}
+        #Hexadecimal{color:#6a5acd;}
+        #align{text-align: left;}
+        #right{text-align: right;}
+        #center{text-align: center;}
+        #text{border: 1px solid gray}
+        #rolem{text-align: justify;}
+        #family{
+            font-size: 1rem;
+            font-family: arial, verdana, "Helvetica Neue", serif;
+        }
+        #weight{
+            font-weight:bold;
+        }
+        #height{
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>
+    <div>
+        <div>
+        <h2>폰트</h2>
+        <ul>
+            <li>px</li>
+            <li>em</li>
+            <li id="rem1">rem</li>
+        </ul>
+        <div id="px">px</div>
+        <div id="rem">rem</div>
+        <p>사용자가 브라우저의 글꼴 크기를 키웠을때 px는 바뀌지 않고 rem은 바뀐다.</p>
+        </div>
+        <div>
+            <h2>Font-Family</h2>
+            <p id="family">family</p>
+            <p>font family를 통해 보여주고싶은 폰트를 우선순위로 정할 수 있다. 이 때 마지막 폰트를 포괄적인 폰트(serif, monospace 등)로 지정해야 한다.</p>
+            <p>monospace는 고정폭을 의미하다며, 가변폭은 자연스럽지만 고정폭은 데이터를 다룰때 일목요연한 형태로 정리가 가능</p>
+        </div>
+        <div>
+            <h2>Font-wieght</h2>
+            <p id="weight">weight</p>
+            <p>weight의 설정을 통해 텍스트를 굵게 표시가능하다</p>
+        </div>
+        <div>
+            <h2>Line-height</h2>
+            <p id="height">
+            Line Height<br>
+            Line Height
+            </p>
+            <p>기본값이 1.2</p>
+            <p>px과 같은 고정된 값은 피하고 2(2배) 같은 상대적인 수치를 사용하는게 좋다.</p>
+        </div>
+        <div>
+            <p>font:bold 5rem/2 arial, verdana, "Helvetica Neue", serif 로 축약 표현이 가능하다</p>
+        </div>
+        <div>
+            <h2>웹 폰트</h2>
+            <p><a href="https://fonts.google.com/?authuser=1">구글 폰트</a></p>
+            <p>한국어 폰트의 경우는 용량이 크다(자음과 모음의 결합한 문자의 수가 많기 때문에)</p>
+            <p>link href를 통해 브라우저가 서버로 부터 웹 폰트 다운받는다.</p>
+        </div>
+    </div>
+    <div>
+        <h2>color</h2>
+        <a href="https://www.w3schools.com/css/css_colors.asp" target="_blank">색상확인</a>
+        <ul>
+            <li id="colors">colors</li>
+            <li id="RGB">RGB</li>
+            <li id="Hexadecimal">Hexadecimal Colors</li>
+        </ul>
+    </div>
+    <div>
+        <h2>text-align</h2>
+        <ul id="text">
+            <li id="left">좌측정렬</li>
+            <li id="right">우측정렬</li>
+            <li id="center">중앙정렬</li>
+        </ul>
+        <p id="rolem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut massa quam. Pellentesque ut sodales lectus, et lacinia leo. Sed cursus urna in elit aliquet, ut fringilla lorem sagittis. Curabitur pellentesque iaculis est vitae vehicula. Etiam porta tristique massa vitae dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse sollicitudin quam vitae ipsum rutrum ultrices. Etiam aliquam ornare ante in fringilla. Etiam faucibus libero eget aliquet facilisis. Cras molestie ante sed accumsan eleifend. Aliquam pretium, tellus sollicitudin consectetur euismod, lectus lorem scelerisque nulla, tincidunt mollis ante enim at urna. Nulla sed mi euismod enim mattis elementum ac sed neque. Aliquam sit amet elementum tortor, non malesuada odio.</p>
+        <p>justify를 통해 단락의 간격을 조정하여 양쪽에 텍스트를 균등하게 분배된다.</p>
+    </div>
+
+
+</body>
+</html>

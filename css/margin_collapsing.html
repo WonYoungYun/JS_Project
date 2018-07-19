@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        #margin{
+            border:1px solid red;
+            margin:50px;
+        }
+        #parent{
+            border:1px solid tomato;
+            margin-top: 50px;
+        }
+        #child{
+            background-color: powderblue;
+            margin-top: 20px;
+        }
+        #empty{
+            margin-top : 50px;
+            margin-bottom: 100px;
+            /*border: 1px solid tomato;*/
+        }
+        #normal{
+            background-color: powderblue;
+            margin-top:50px;
+        }
+        
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>  
+<section>
+    <article>
+        <h2>margin1</h2>
+        <p>margin은 element들 사이의 간격</p>
+        <p>margin이 어떤 경우에는 사라져버리는 현상이 생긴다.</p>
+        <h1 id="margin">Hello</h1>
+        <h1 id="margin">Hello</h1>
+        <p>검사를 이용해서 확인해 보면 위의 Hello의 밑부분과 아래의 Hello의 윗부분 마진이 겹치는 것을 확인할 수 있다.</p>
+        <p>즉 위아래의 마진값중 더 큰 값이 두 element의 마진값이 된다.</p>
+    </article>
+    <article>
+        <h2>margin2</h2>
+        <p>부모자식간의 margin</p>
+        <div id="parent">
+            <div id="child">Hello</div>
+        </div>
+        <p>부모 element에게 시각적 효과가 있을때는 부모의 마진 + 자식의 마진이 마진값이 됨</p>
+        <p>부모 element에게 시각적 효과가 없으면 부모와 자식의 마진값중 더 큰 값이 자식의 마진값이 된다.</p>
+    </article>
+    <article>
+        <h2>margin3</h2>
+        <div id="empty"></div>
+        <div id="normal">normal</div>
+        <p>empty의 경계를 제거 하면 normal empty의 자리에 위치하게 된다.</p>
+        <p>즉 empty의 top 마진과 bottom마진 중 큰 값이 empty의 마진값이되며 이 마진은 normal과 collapsing이 일어나기때문에<br>
+            normal의 top 마진이 100이상되면 커지게된다.
+        </p>
+        <p>empty에게 시각적 효과를 주면 normal은 empty의 top 마진 50 + empty의 bottom마진과 normal의 top마진의 collapsing 100의<br>
+            합인 150의 위치로 이동된다.
+        </p>
+    </article>
+        <article>
+        <h2>margin3</h2>
+        <div id="empty"></div>
+        <div id="normal">normal</div>
+        <p>empty의 경계를 제거 하면 normal empty의 자리에 위치하게 된다.</p>
+        <p>즉 empty의 top 마진과 bottom마진 중 큰 값이 empty의 마진값이되며 이 마진은 normal과 collapsing이 일어나기때문에<br>
+            normal의 top 마진이 100이상되면 커지게된다.
+        </p>
+        <p>empty에게 시각적 효과를 주면 normal은 empty의 top 마진 50 + empty의 bottom마진과 normal의 top마진의 collapsing 100의<br>
+            합인 150의 위치로 이동된다.
+        </p>
+    </article>
+</section>
+
+
+<footer>
+    <a href="boxmodel.html">이전</a>
+    <a href="position.html">다음</a>
+</footer>
+</body>
+</html>

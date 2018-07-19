@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        div{
+            border:5px solid tomato;
+            }
+        #me{
+            position: relative;
+            left:30px;
+            top:10px;
+        }
+        #d{
+            position:relative;
+        }
+        #c{
+            background-color: black;
+            color:white;
+            position: absolute;
+            left: 50px;
+            top: 0px;
+            width:100px;
+        }
+        body{
+            padding-bottom:30px;
+        }
+        #m{
+            background-color: black;
+            color:white;
+            position: fixed;
+            left: 0;
+            bottom:0;
+            width:100%;
+            height:20px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>  
+<section>
+    <article>
+        <h2>relative vs static</h2>
+        <div id="other">other</div>
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+        <p>position을 relative로 바꿔주면 offset을 통해 태그의 위치를 이동시킬 수 있다.<br>
+            이동시키고자 하는 방향의 반대로 입력(오른쪽이면 left값 작성)
+        </p>
+        <p>left와 right가 동시에 있다면 left를 따름, top과 bottom은 top이 우선</p>
+        <p>css들의 element는 각각 포지션의 기본값을 가지고 있다 = static</p>
+    </article>
+    <article>
+        <h2>absolute</h2>
+        <div id="a">other</div>
+        <div id="d">
+            grand
+            <div id="b">
+                parent
+                <div id="c">me</div>
+            </div>
+        </div>
+        <p>absolute로 부모 element의 기준이 아닌 html의 기준으로 위치를 정할 수 있다.</p>
+        <p>하지만 absolute에 아무런 값도 주지 않으면 부모 element의 밑 즉 자신의 원래자리에 위치한다.</p>
+        <p>또 absolute값이 주어지면 부모 element와의 링크가 끊어지게되어 자기자신의 content만큼 작아지게 된다.</p>
+        <p>만약 absolute값을 준 태그의 상위태그에 static이 아닌 태그가 있다면 그 태그의 위치를 기준으로 offset값을 지정한다.</p>
+    </article>
+    <article>
+            <h2>fixed</h2>
+            <div id="o">other</div>
+            <div id="p">
+                parent
+                <div id="m">me</div>
+            </div>
+            <p>fixed는 특정한 elemetn를 화면의 위치에 고정시켜서 스크롤로부터 완전히 독립되게 하는 것</p>
+            <p>fixed한 element에 body가 가려지지 않게 하기위해 body에 padding을 준다.</p>
+            <p>fixed도 absolute처럼 width와 height를 지정하지 않으면 부모가 없어지기 떄문에 자기 컨텐츠의 크기가 된다.</p>
+            <p>또 부모 element는 자식과의 연결이 끊어지기 때문에 부모 element는 자식 element의 크기를 포함하지 않는다.</p>
+    </article>
+</section>
+<footer>
+    <a href="margin_collapsing.html">이전</a>
+</footer>
+</body>
+</html>

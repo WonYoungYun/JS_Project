@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        /*
+        li{color:red;}
+        h1{color:red;}
+        */
+        a{text-decoration: none;}
+        body{color:red;}
+        #select{color:black;}
+        p{color:black;}
+        #inheritance{border:1px solid red;}
+        #cascading{color:black;}
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>
+<section>
+    <article id="inheritance">
+    <h1>수업내용</h1>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="select">javascript</li>
+    </ul>
+    <p>부모의 color를 자식들이 물려받으면서 색상을 주고싶은 것만 지정해서 코드를 작성하는 것이 훨씬 더 경제적이고 생산성이 높다</p>
+    <p>크롬의 검사를 이용하여 html과 css의 붉은색이 body로부터 상속받은 것을 확인 할 수 있다.</p>
+    <p>border는 상속되지 않는 것을 확인 할 수 있다.</p>
+    </article>
+    <article id="cascading">
+        <h2>Cascading</h2>
+        <p>CSS는 Cascading Style Sheet의 줄임말</p>
+        <p>웹브라우저 < 사용자 < 저자</p>
+    </article>
+</section>
+<footer>
+    <a href="cascading.html">다음</a>
+</footer>
+
+</body>
+</html>

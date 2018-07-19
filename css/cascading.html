@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        li{color:red;}
+        #idsel{color:blue;}
+        .classsel{color:green;}
+        ol>li{color:black;}
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="helloworld.html">CSS</a></h1>
+</header>
+<section>
+    <article>
+        <ul>
+            <li>html</li>
+            <li id="idsel" class="classsel" style="color:powderblue">css</li>
+            <li>javascript</li>
+        </ul>
+        <p>하나의 태그에 중첩되어서 css가 적용되었을때 우선순위는</p>
+        <ol>
+            <li>style attribute(스타일 속성)</li>
+            <li>id selector</li>
+            <li>class selector</li>
+            <li>tag selector</li>
+        </ol>
+        <p>!important를 통해 순위를 올려줄 수 있다. 하지만 추천하지는 않음</p>
+
+    </article>
+
+</section>
+<footer>
+    <a href="inheritance.html">이전</a>
+</footer>
+
+</body>
+</html>
