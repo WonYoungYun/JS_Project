@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width:600px;
+            border:1px solid black;
+            margin:auto;
+        }
+        header{
+            border-bottom: 1px solid black;
+        }
+
+        nav{
+            width:120px;
+            float:left;
+            border-right:1px solid black;
+        }
+        article{
+            width:360px;
+            float:left;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            margin-left:-1px;
+        }
+        aside{
+            width:120px;
+            float:left;
+            border-left:1px solid black;
+            margin-left:-1px;
+        }
+        footer{
+            clear:both;
+            border-top:1px solid black;
+            text-align:center;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="container">
+        <header>
+            <h1><a href="../helloworld.html">CSS</a></h1>
+        </header>
+        <nav>
+            <ul>
+                <li>position</li>
+                <li>float</li>
+                <li>flex</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>float</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas architecto, velit voluptatum possimus unde excepturi amet in molestias eaque eius mollitia pariatur ad ipsam beatae, ex incidunt, laudantium aspernatur corporis sapiente. Laborum, molestiae. Recusandae aliquam odit facilis repellat consequuntur cumque dignissimos quasi deleniti nobis, cum soluta accusantium ipsam quis nemo?</p>
+        </article>
+        <aside>
+            <p>ad</p>
+        </aside>
+        <footer>
+            <a href="float.html">이전</a>
+            <a href="multicol.html">다음</a>
+        </footer>
+    </div>
+</section>
+</body>
+</html>

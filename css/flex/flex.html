@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        .container{
+            background-color:powderblue;
+            display:flex;
+            flex-direction:row-reverse;
+        }
+        .item{
+            background-color: tomato;
+            color:white;
+            border:1px solid white;
+            /*flex-grow: 1;*/
+        }
+        .item:nth-child(1){
+            flex-basis:200px;
+            /*flex-grow: 2;*/
+            flex-shrink: 0;
+         }
+        .item:nth-child(2){
+            flex-basis:200px;
+            /*flex-grow: 2;*/
+         }
+    </style>
+</head>
+<body>
+<header>
+    <h1><a href="../helloworld.html">CSS</a></h1>
+</header>
+<section>
+    <article>
+        <h2>Flex</h2>
+        <a href="https://codepen.io/enxaneta/pen/adLPwv" target="_blank">Flex에대해 더 알아보기</a>
+        <p>레이아웃을 위한 기능</p>
+        <p>flux를 위한 container와 item</p>
+        <ul>
+            <h3>container</h3>
+            <li>display = flex설정을 해줌</li>
+            <li>flex-direction  = 설정을통해 정렬위치변경 (기본값은 row)</li>
+            <li>flex-wrap</li>
+            <li>flex-flow</li>
+            <li>justify-content = flex로 설정한 레이아웃의 브라우저 상의 수평 위치를 바꾼다.</li>
+            <li>align-items = flex로 설정한 레이아웃의 브라우저상의 수직 위치를 바꾼다</li>
+            <li>align-content = align-items과 비슷하지만 items는 container안의 전체 element를 하나의 그룹으로보고<br>
+                align-content는 같은 행을 하나의 그룹으로 쳐서 그룹과 그룹사이의 정렬을 결정해줌</li>
+        </ul>
+        <ul>
+            <h3>item</h3>
+            <li>order = element에 rank를 부여하여 출력순서를 바꿀 수 있다.</li>
+            <li>flex-grow = container의 item이 container의 여백을 채움(기본값0)</li>
+            <li>flex-shrink = 브라우저의 창을 줄였을때 element의 크기를 shirnk/전체shrink값 만큼 분담함<br>
+                (0이면 작아지지 않는다, 기본으로 basis값을 가지고 있어야 한다.)</li>
+            <li>flex-basis = element의 기본 크기 지정</li>
+            <li>flex = flex-grow, flow-shrink, flow-basis를 축약</li>
+            <li>align-self = align-items로 지정된 상태에서 특정한 것만 이동시키기 위해서 align-self를 사용</li>
+        </ul>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </article>
+</section>
+<footer>
+    <a href="holygrail.html">다음</a>
+</footer>
+</body>
+</html>

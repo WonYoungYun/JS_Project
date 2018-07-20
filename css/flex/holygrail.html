@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:1px solid gray;
+            padding-left:20px;
+        }
+        footer{
+            border-top:1px solid gray;
+            padding:20px;
+            text-align: center;
+        }
+        .content{
+            display:flex;
+             
+        }
+        .content nav{
+            border-right:1px solid gray;
+        }
+        .content aside{
+            border-left:1px solid gray;    
+        }
+        @media(max-width:500px){
+            .content{
+                flex-direction: column;
+            }
+            .content nav, .content aside{
+                border:none;
+                flex-basis: auto;
+            }
+            main{
+                order:0;
+            }
+            nav{
+                order:1;
+            }
+            aside{
+                order:2;
+                display: none;
+            }
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="container">
+        <header>
+            <h1><a href="../helloworld.html">CSS</a></h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>js</li>
+                </ul>
+            </nav>
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, commodi. Debitis, nostrum ex corrupti provident quaerat a. Suscipit, modi vero. Hic, possimus ad quae aperiam totam impedit perferendis fuga consectetur error iste! Consequuntur quis quaerat sint totam. Nostrum, error ea vel illum magnam voluptatem autem corporis fuga magni aut possimus asperiores deleniti nemo veniam earum eum laborum illo. Laboriosam perspiciatis ab placeat cupiditate? Temporibus tempora, rem placeat hic, laborum perferendis sapiente dolor, voluptates omnis nisi ad! Ipsum illum placeat totam aspernatur porro unde minima culpa, ea consequuntur quibusdam eius quasi autem vel sit deserunt necessitatibus sapiente assumenda non vero. Nisi!
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="flex.html">이전</a>
+            <a href="mediaquery.html">다음</a>
+        </footer>
+    </div>
+</section>
+</body>
+</html>
