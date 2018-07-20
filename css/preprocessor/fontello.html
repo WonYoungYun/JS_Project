@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <link rel="stylesheet" href="out.css">
+    <style>
+        #test{
+            font-size:50px;
+        }
+        #test:before{
+            content:"s";
+            color:red;
+            font-size:30px;
+        }
+        #test:after{
+            content:"e";
+        }
+    </style>
+</head>
+<body >
+<section>
+    <div>
+        <header>
+            <h1><a href="../helloworld.html">CSS</a></h1>
+        </header>   
+        <h2>fontello</h2>   
+        <p><a href="http://fontello.com" target="_blank">fontello</a></p>
+        <p><a href="http://unicode-table.com/en" target="_blank">unicode-table</a></p>
+        <p>웹 사이트나 어플리케이션에서 아이콘을 삽입할 때 이미로 할 수 있지만 특수한 문자로 특정한 이미지로 표현하게 하는 방식</p>
+        <p>즉 문자만 입력하면 문자에 해당되는 폰트가 자동으로 웹페이지에 추가가되서 벡터방식의 이미지를 웹사이트에 안전하고 쉽게 추가할 수 있다.</p>
+        <ol>
+            <li>fontello.com에서 자신이 원하는 문자이미지를 맏는다.</li>
+            <li>link rel로 fontello 파일을 링크</li>
+            <li>font-family: fontello로 적용(link만 하는것이아니라 적용까지 시켜야 한다.</li>
+            <li>font-family로 적용시키지 않으려면, class로 해당 이미지의 class명을 적어주면 된다.</li>
+            <li>해당 코드를 입력하면 fontello를 사용 할 수 있다.</li>
+        </ol>
+        <p>&#xe11;    <- html entity</p>
+
+
+        <h2>Fontello의 원리</h2>
+        <div id="test">
+            A 
+        </div>
+        <p>css에서 before라는 가상선택자와 content를 이용하면 앞에 문자를 생성해 줄 수 있다. 즉 css는 정보를 꾸미는 것 뿐만 아니라 정보를 변형 시킬수 있다(시각적으로만)</p>
+
+        <footer>
+            <p><a href="preprocessor.html">이전</a></p>
+        </footer>
+    </div>
+</section>
+</body>
+</html>
