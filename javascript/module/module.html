@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>모듈</h2>
+            <p>자주 사용되는 코드를 별도의 파일로 만들어서 필요할 때마다 재활용할 수 있다.</p>
+            <p>코드를 개선하면 이를 사용하고 있는 모든 애플리케이션의 동작이 개선</p>
+            <p>코드 수정 시에 필요한 로직을 빠르게 찾을 수 있다.</p>
+            <p>메모리의 낭비를 줄일 수 있다.</p>
+            <script>
+                document.write(welcome());
+            </script>
+            <h2>node.js의 경우</h2>
+            <p>require을 이용</p>
+            <h2>라이브러리</h2>
+            <p>JQuery</p>
+            <ul id="list">
+                <li>empty</li>
+                <li>empty</li>
+                <li>empty</li>
+                <li>empty</li>
+            </ul>
+            <input type="button" value="execute" id="execute_btn" onclick="$('#list li').text('hi everybody');">
+        </article>        
+        <article>
+            <h2>API</h2>
+            <p>자바스크립트 자체의 API와 자바스크립트가 동작하는 호스트환경의 API로 구분된다.</p>
+            <p><a href="https://www.ecma-international.org/" target="_blank">ECMA(표준문서)</a></p>
+            <p><a href="https://opentutorials.org/course/50" target="_blank">javascript 사전(생활코딩)</a></p>
+            <p><a href="https://msdn.microsoft.com/ko-kr/library/yek4tbz0(v=vs.94).aspx" target="_blank">javascript(MSDN)</a></p>
+            <p><a href="https://nodejs.org/api/index.html" target="_blank">Node.js API</a></p>
+
+
+        </article>
+
+    </section>
+    <footer>
+    </footer>
+</div>
+</body>
+</html>

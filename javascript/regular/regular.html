@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>정규표현식</h2>
+            <p>문자열에서 특정한 문자를 찾아내는 도구</p>
+            <h3>정규표현식 리터럴</h3>
+            <h3>정규표현식 객체 생성자</h3>
+            <p>추출과 테스트, 치환</p>
+            <script>
+                var pattern = /a/;
+                var pattern = new RegExp('a');
+                document.write(pattern.exec('abcdef')+"<br>");
+                document.write(pattern.exec('bcdef')+"<br>");
+                pattern = /a./;
+                document.write(pattern.exec('abcdef')+"<br>");
+                document.write(pattern.test('af')+"<br>");
+                document.write('abcdefg'.match(pattern)+"<br>");
+                document.write('abcdefg'.replace(pattern, 'A')+"<br>");
+            </script>
+            <p>exec -> 추출</p>
+            <p>match -> 추출</p>
+            <p>test -> 테스트</p>
+            <p>replace -> 치환</p>
+            <h3>정규표현식의 옵션</h3>
+            <script>
+                var xi =/a/;
+                document.write('Abcdefg'.match(xi)+"<br>");
+                var xi =/a/i;
+                document.write('Abcdefg'.match(xi)+"<br>");
+                var xg = /a/;
+                document.write('abcdefga'.match(xg)+"<br>");
+                var xg = /a/g;
+                document.write('abcdefga'.match(xg)+"<br>");
+                var xig = /a/ig;
+                document.write('AabcdefgAa'.match(xig)+"<br>");
+            </script>
+            <p>i를 붙이면 대소문자를 구분하지 않는다.</p>
+            <p>g를 붙이면 겁색된 모든 결과를 return함</p>
+            <p><a href="http://regexper.com/" target="_blank">정규표현식 시각화</a></p>
+            <p><a href="http://gskinner.com/RegExr/"target="_blank">정규표현식 테스트</a></p>
+            <script>
+                var pattern = /(\w+)\s(\w+)/;
+                var str = "Hi Everybody";
+                var result = str.replace(pattern, "$2, $1");
+                document.write(result)
+            </script>
+            <h2>url 치환</h2>
+            <script>
+                var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+                var content = '다음 : http://daum.net 입니다. 네이버 : http://naver.com 입니다. ';
+                var result = content.replace(urlPattern, function(url){
+                    return '<a href="'+url+'" target="_blank">'+url+'</a>';
+                });
+                document.write(result);
+            </script>
+        </article>        
+    </section>
+    <footer>
+    </footer>
+</div>
+</body>
+</html>
