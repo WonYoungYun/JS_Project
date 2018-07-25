@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>외부함수, 내부함수</h2>
+            <p>내부함수가 외부함수의 맥락에 접근할 수 있는 것을 가르킨다.</p>
+            <script>
+                function outter(){
+                    var title = 'Hi EveryBody';
+                    return function(){
+                        document.write(title);
+                    }
+                }
+                var inner = outter();
+                inner();
+            </script>
+            <p>내부함수를 포함하는 외부함수에 접근 가능, 종료된 이후에도 내부함수를 통해 접근가능</p>
+        </article>
+        <article>
+            <h2>Private variable</h2>
+            <script>
+                function factory_movie(title) {
+                    return {
+                        get_title : function() {
+                            return title;
+                        },
+                        set_title : function(_title){
+                            if(typeof _title === 'String'){title = _title;}
+                            else{title = _title;}
+                        }
+                    }
+                }
+                star = factory_movie('StarWars');
+                space = factory_movie('2001 Space Odyssey');
+                document.write(star.get_title() + "<br/>");
+                document.write(space.get_title() + "<br/>");
+                star.set_title('스타워즈');
+                document.write(star.get_title() + "<br/>");
+            </script>
+            <p>title은 get_title과 set_title을 통해서만 접근가능</p>   
+        </article>
+        <article>
+            <h2>클로저의 응용</h2>
+            <script>
+                var arr =[]
+                for(var i =0; i<5; i++){
+                    arr[i] = function(id){
+                        return function(){
+                            return id;
+                        }
+                    }(i);
+                }
+                for(var index in arr) {
+                    document.write(arr[index]());
+                }
+            </script>
+            <p>arr[0]~arr[4]의 context가 동일환 외부환경을 가지기 때문에 루프를 마친 i의 값인 5를 동일하게 참조하게 된다.</p>
+            <p>closure를 사용하여 모든 함수가 자신만의 context를 가지게 되어 루프를 돌때마다 함수들이 정의되기 때문에 각각의 i값이 달라진다.</p>
+        </article>
+    </section>
+    <footer>
+        <p><a href="collback.html">이전</a></p>
+        <p><a href="arguments.html">다음</a></p>
+    </footer>
+</div>
+</body>
+</html>
