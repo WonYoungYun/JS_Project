@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <ul>
+                <li>추상화</li>
+                <li>부품화</li>
+                <li>은닉화, 캡슐화, 인터페이스</li>
+            </ul>
+            <h2>생성자와 new</h2>
+            <p>생성자는 객체를 만드는 역활을 하는 함수이다.</p>
+            <script>
+                function Person() {}
+                var p = new Person();//생성자
+                p.name = 'ywy';
+                p.introduce = function(){
+                    return 'My name is ' +p.name;
+                }
+                document.write(p.introduce() +"<br/>");
+                var p1 = new Person();
+                p1.name = 'kak';
+                p1.introduce = function(){
+                    return 'My name is ' + p1.name;
+                }
+                document.write(p1.introduce() +"<br/>");
+
+                function Person1(name) {
+                    this.name = name;
+                    this.introduce = function() {
+                        return 'My name is ' + this.name + '<br/>';
+                    }
+                }
+                var p2 = new Person1('aaa');
+                var p3 = new Person1('bbb');
+                document.write(p2.introduce());
+                document.write(p3.introduce());
+            </script>
+            <p>java는 class안에 생성자가 존재하지만 javascript는 생성자가 그저 함수로서 존재한다. new를 이용해 객체 생성</p>
+        </article>
+        <article>
+            <h2>전역객체</h2>
+            <p>모든 객체는 전역객체의 프로퍼티이다.</p>
+            <p>모든 전역변수와 함수는 window의 프로퍼티이다</p>
+            <script>
+                function func() {
+                    document.write("hello<br/>");
+                }
+                func();
+                window.func();
+
+                var o = {'func':function(){
+                    document.write('Hi<br/>');
+                }}
+                o.func();
+                window.o.func();
+            </script>
+        </article>
+    </section>
+    <footer>
+        <p><a href="this.html">다음</a></p>
+    </footer>
+</div>
+</body>
+</html>

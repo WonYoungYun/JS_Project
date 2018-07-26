@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>Object</h2>
+            <p>모든 객체들의 Prototype</p>
+            <p>모든 객체에 사용할 수 있는 기능을 Object에 추가하여 사용가능</p>
+            <script>
+                var arr =["a", "b", "c"];
+                document.write('Object.keys(arr) = ',Object.keys(arr) + "<br/>");
+                var o = {"name" : "ywy", "age" : 24, "city" : "busan"};
+                document.write('Object.keys(o) = ',Object.keys(o)+"<br/>");
+                var p = new Object();
+                document.write('o.toStirng() = ', o.toString() +"<br/>");
+                var a = new Array(1,2,3);
+                document.write('a.toStirng() = ', a.toString() + "<br/>");
+            </script>
+            <p>keys는 Object.keys지만 toString은 Obejct.prototype.toString()이다</p>
+            <p>keys는 새로운 객체를 생성하지 않고도 사용할 수 있지만, toStirng은 새로운 객체를 만들어 Object를 상속받아 사용해야 한다.</p>
+        </article>
+        <article>
+            <h2>Object의 확장</h2>
+            <script>
+                Object.prototype.contain = function(state) {
+                    for(var name in this){
+                        if(this[name] === state) return true;
+                    }
+                    return false;
+                }
+                var o = {'name' : 'ywy', 'city' : 'Busan'}
+                document.write(o.contain('ywy'));
+            </script>
+            <h4>Object 확장의 위험</h4>
+            <p>모든 객체에 영향을 주기 떄문에 Object의 확장을 쓰지만 그렇기 떄문에 위험하다</p>
+            <script>
+                for(var name in o){
+                    document.write(name+"<br/>");
+                }
+            </script>
+            <p>o에 Object의 contain까지 포함되어버리게 된다. (즉 자신이 정의한 데이터 이외의 것이 포함됨)</p>
+            <script>
+                for(var name in o){
+                    if(o.hasOwnProperty(name)){
+                        document.write(name+"<br/>");
+                    }
+                }
+            </script>
+            <p>hasOwnProperty로 자신의 프로퍼티인지 부모로 부터 상속받은 프로퍼티인지 구분이 가능</p>
+        </article>
+    </section>
+    <footer>
+        <p><a href="standardB.html">이전</a></p>
+        <p><a href="object.html">다음</a></p>
+    </footer>
+</div>
+</body>
+</html>

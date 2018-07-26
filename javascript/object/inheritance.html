@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>상속</h2>
+            <p>객체의 로직을 그대로 물려 받는 또 다른 객체를 만들 수 있는 기능</p>
+            <script>
+                function Person(name) {
+                    this.name = name;
+                }
+                Person.prototype.name = null;
+                Person.prototype.introduce = function() {
+                    return 'My name is '+ this.name;
+                }
+                function Programmer(name) {
+                    this.name = name;
+                }
+                Programmer.prototype = new Person();
+                Programmer.prototype.coding = function() {
+                    return "Hello World!";
+                }
+                var p1 = new Programmer('ywy');
+                document.write(p1.introduce()+"<br/>")
+                document.write(p1.coding()+"<br/>")
+            </script>
+        </article>
+        <article>
+            <h2>Prototype</h2>
+            <p>객체의 원형, prototype에 저장된 속성들은 생성자를 통해 객체가 만들어질 때 그 객체에 연결된다.</p>
+        </article>
+        <script>
+            function Ultra(){
+                Ultra.prototype.ultraProp = true;
+            }
+            function Super(){
+                Super.prototype = new Ultra();
+            }
+            function Sub() {
+                Sub.prototype = new Super();
+            }
+            var o = new Sub();
+            o.ultraProp = 1;
+            document.write(o.ultraProp);
+        </script>
+        <p>Prototype Chain</p>
+    </section>
+    <footer>
+        <p><a href="this.html">이전</a></p>
+        <p><a href="standardB.html">다음</a></p>
+    </footer>
+</div>
+</body>
+</html>

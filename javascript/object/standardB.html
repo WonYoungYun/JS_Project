@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>표준 내장 객체</h2>
+            <p>자바스크립트가 기본적으로 가지고 있는 객체들을 의미</p>
+            <ul>
+                <li>Object</li>
+                <li>Function</li>
+                <li>Array</li>
+                <li>String</li>
+                <li>Boolean</li>
+                <li>Number</li>
+                <li>Math</li>
+                <li>Date</li>
+                <li>RegExp</li>
+            </ul>
+            <h4>배열의 확장</h4>
+            <script>
+                var arr = new Array('Seoul', 'New York', 'Busan', 'Tsukuba')
+                function getRandomValueFromArray(arr){
+                    var index = Math.floor(arr.length*Math.random());
+                    return arr[index];
+                }
+                document.write(getRandomValueFromArray(arr)+'<br/>');
+                
+                Array.prototype.random = function(){
+                    var index1 = Math.floor(this.length*Math.random());
+                    return this[index1];
+                }
+                var arr1 = new Array('A', 'B', 'C', 'D')
+                document.write(arr1.random());
+            </script>
+        </article>
+    </section>
+    <footer>
+        <p><a href="this.html">이전</a></p>
+        <p><a href="object.html">다음</a></p>
+    </footer>
+</div>
+</body>
+</html>
