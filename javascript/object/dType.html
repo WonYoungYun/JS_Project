@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+     <script src="greeting.js"></script>
+     <script src="jquery.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+<div>
+    <header>
+        <h1><a href="../js.html">JavaScript</a></h1>
+    </header>
+    <section>
+        <article>
+            <h2>원시 데이터 타입</h2>
+            <ul>
+                <li>숫자</li>
+                <li>문자</li>
+                <li>불리언</li>
+                <li>null</li>
+                <li>undefined</li>
+            </ul>
+            <p>객체가 아닌 데이터 타입</p>
+            <p>문자열은 프로퍼티와 메소드가 존재하기 떄문에 객체이지만 왜 객체라고 하지 않을까?
+            </p>
+            <p>문자열은 원시 데이터 타입이고 문자열과 관련된 어떤 작업을 하려 할 때 자바스크립트는 임시로 문자열 객체를 만들고 제거한다.</p>
+            <p>이러한 처리는 내부적으로 일어난다.</p>
+            <script>
+                var str = 'code';
+                str.prop = 'every'; //이떄는 객체가 생성
+                document.write(str.prop); //객체가 제거됨
+            </script>
+            <h2>Wrapper</h2>
+            <ul>
+                <li>Number</li>
+                <li>String</li>
+                <li>Boolean</li>
+            </ul>
+        </article>
+        <article>
+            <h2>참조</h2>
+            <script>
+                var a = {'id':1};
+                var b = a;
+                b.id = 2;
+                document.write(a.id);
+            </script>
+            <p>변수에 담겨있는 데이터가 원시형이면 그 안에는 실제 데이터가 들어있고 <br/>객체면 변수 안에는 데이터에 대한 참조 방법이 들어있다고 할 수 있다. </p>
+            <script>
+                var a ={'id':1};
+                var b = a;
+                b = {'id':2};
+                document.write(a.id);
+            </script>
+            <h4>함수의 참조</h4>
+            <script>
+                var a =1; //원시 데이터 타입을 인자로 넘긴다.
+                function func(b) {
+                    b = 2;
+                }
+                func(a);
+                document.write(a+'<br/>');
+                
+                var a ={'id':1};//b가 가르키는 객체가 변경됨으로 a에 영향을 주지 않는다.
+                function func2(b) {
+                    b = {'id' : 2};
+                }
+                func2(a);
+                document.write(a.id + '<br/>');
+
+                var a = {'id': 1};//파라미터 b는 a의 객체 레퍼런스다. b.id를 바꾸면 객체 a에 영향을 주기 때문에 a.id의 값에 영향을 준다.
+                function funca(b) {
+                    b.id = 2;
+                }
+                funca(a);
+                document.write(a.id);
+
+            </script>
+        </article>
+    </section>
+    <footer>
+        <p><a href="object.html">이전</a></p>
+    </footer>
+</div>
+</body>
+</html>
