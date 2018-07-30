@@ -1,20 +1,30 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
+    <title>Web Library</title>
     <meta charset="utf-8">
-    <title>Hello world!</title>
-    <h1>Web</h1>
-    <ol>
-        <li><a href="./html/page.html">HTML</a></li>
-        <li><a href="./css/helloworld.html">CSS</a></li>
-        <li><a href="./javascript/js.html">javascript</a></li>
-    </ol>
-    <article>
-
-    </article>
-
+    <script src="index/index.js"></script>
+    <link rel="stylesheet" href="index/index.css">
+    
 </head>
 <body>
+    <h1>Web Programming Library</h1>
+    <div id="index_container">
+        <ul class="corenavi">
+            <li><a href="#!html/page.html" class="corenavi_1" onclick="fetchPages('html/page.html', '#html_library')">HTML</a>
+                <div id="html_library">
+                </div>
+            </li>
+            <li><a href="#!css/helloworld.html" class="corenavi_2" onclick="fetchPages('css/helloworld.html', '#css_library')">CSS</a>
+                <div id="css_library">
+                </div>
+            </li>
+            <li><a href="#!javascript/js.html" class="corenavi_3" onclick="fetchPages('javascript/js.html', '#js_library')">javascript</a>
+                <div id="js_library">
+                </div>
 
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
