@@ -3,9 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Hello world!</title>
-    <p><a href="./html/page.html">HTML</a></p>
-    <p><a href="./css/helloworld.html">CSS</a></p>
-    <p><a href="javascript/js.html">CSS</a></p>
+    <ol>
+        <li><a href="./html/page.html">HTML</a></li>
+        <li><a href="./css/helloworld.html">CSS</a></li>
+        <li><a onclick="
+            fetch('./javascript/js.html').then(function(response){response.text().then(function(text){
+                document.querySelector('article').innerHTML = text;
+                })
+            })
+            ">javascript</a></li>
+    </ol>
+    <article>
+
+    </article>
 </head>
 <body>
 
