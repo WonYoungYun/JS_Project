@@ -4,3 +4,4 @@ function fetchPages(name,position){
         })
     })
 }
+
