@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <script src="index/index.js"></script>
     <link rel="stylesheet" href="index/index.css">
+    <link rel="stylesheet" href="index/border.css">
     
 </head>
 <body>
@@ -15,24 +16,56 @@
         <div id="index_container">
             <ul class="corenavi">
                 <div id="html_lib">
-                <li><a href="#!html/page.html" class="corenavi_html" onclick="fetchPages('html/page.html', '#html_library')">HTML</a>
-                    <div id="html_library">
-                    </div>
+                <li><a href="#!html/page.html" class="corenavi_html" >HTML</a>
+                    <ol id="html_library">
+                        <li><a href="html/one.html">h1, u, strong, img</a></li>
+                        <li><a href="html/two.html">p, br, ul, ol</a></li>
+                        <li><a href="html/three.html">a, div, span</a></li>
+                        <li><a href="html/table.html">table</a></li>
+                        <li><a href="html/form.html">form, button</a></li>
+                        <li><a href="html/form_hidden.html">hidden, label</a></li>
+                        <li><a href="html/method.html">method, Upload</a></li>
+                        <li><a href="html/semantic.html">semantic</a></li>
+                        <li><a href="html/searchEngine.html">검색엔진 최적화</a></li>
+                        <li><a href="html/webtool.html">웹 개발자 도구</a></li>
+                        <li><a href="html/newhtml5.html">html5의 새로운 양식</a></li>    
+                    </ol>
                 </li>
                 </div>
                 <div id="css_lib">
-                <li><a href="#!css/helloworld.html" class="corenavi_css" onclick="fetchPages('css/helloworld.html', '#css_library')">CSS</a>
-                    <div id="css_library">
-                    </div>
+                <li><a href="#!css/helloworld.html" class="corenavi_css">CSS</a>
+                    <ol id="css_library">
+                        <li><a href="css/selector/selector.html">선택자</a></li>
+                        <li><a href="css/inheritance/inheritance.html">상속, Cascading</a></li>
+                        <li><a href="css/fontc/font.html">폰트</a></li>
+                        <li><a href="css/csslayout/csslayout.html">레이아웃</a></li>
+                        <li><a href="css/boxmodel/boxmodel.html">박스 모델, 마진 겹침, 포지션</a></li>
+                        <li><a href="css/flex/flex.html">flex, media query</a></li>
+                        <li><a href="css/float/float.html">float, 멀티컬럼</a></li>
+                        <li><a href="css/graphic/graphic.html">그래픽</a></li>
+                        <li><a href="css/link/link.html">link, import</a></li>
+                        <li><a href="css/preprocessor/preprocessor.html">preprocessor, fontello</a></li>        
+                    </ol>
                 </li>
                 </div>
                 <div id="js_lib">
-                <li><a href="#!javascript/js.html" class="corenavi_js" onclick="fetchPages('javascript/js.html', '#js_library')">javascript</a>
-                    <div id="js_library">
-                    </div>
+                <li><a href="#!javascript/js.html" class="corenavi_js">javascript</a>
+                    <ol id="js_library">
+                        <li><a href="javascript/number/number.html">숫자와 문자, 변수, 연산자</a></li>
+                        <li><a href="javascript/condtitional/conditional.html">조건문, 반복문</a></li>
+                        <li><a href="javascript/function/function.html">함수, 배열</a></li>
+                        <li><a href="javascript/module/module.html">모듈</a></li>
+                        <li><a href="javascript/regular/regular.html">정규표현식</a></li>
+                        <li><a href="javascript/functionAim/scope.html">함수지향</a></li>
+                        <li><a href="javascript/object/oop.html">객체지향</a></li>
+                        <li><a href="#!javascript/ajax/ajax.html" onclick="fetchPage('javascript/ajax/ajax.html')">Ajax</a></li>
+                    </ol>
                 </li>
                 </div>
             </ul>
+        </div>
+        <div id="context_container">
+            <article></article>
         </div>
         <footer>
             <p class="name">WonYoung_Yun</p>
