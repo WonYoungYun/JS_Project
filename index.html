@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index/border.css">
     
 </head>
-<body>
+<body id="library">
     <div id="container">
         <header>
         <h1><a id="web_head" href="index.html">Web Programming Library</a></h1>
@@ -16,24 +16,24 @@
         <div id="index_container">
             <ul class="corenavi">
                 <div id="html_lib">
-                <li><a href="#!html/page.html" class="corenavi_html" >HTML</a>
+                <li class="corenavi_html">HTML
                     <ol id="html_library">
-                        <li><a href="html/one.html">h1, u, strong, img</a></li>
-                        <li><a href="html/two.html">p, br, ul, ol</a></li>
-                        <li><a href="html/three.html">a, div, span</a></li>
-                        <li><a href="html/table.html">table</a></li>
-                        <li><a href="html/form.html">form, button</a></li>
-                        <li><a href="html/form_hidden.html">hidden, label</a></li>
-                        <li><a href="html/method.html">method, Upload</a></li>
-                        <li><a href="html/semantic.html">semantic</a></li>
-                        <li><a href="html/searchEngine.html">검색엔진 최적화</a></li>
-                        <li><a href="html/webtool.html">웹 개발자 도구</a></li>
-                        <li><a href="html/newhtml5.html">html5의 새로운 양식</a></li>    
+                        <li><a href="#!html/one.html" onclick="fetchPage('html/one.html')">h1, u, strong, img</a></li>
+                        <li><a href="#!html/two.html" onclick="fetchPage('html/two.html')">p, br, ul, ol</a></li>
+                        <li><a href="#!html/three.html" onclick="fetchPage('html/three.html')">a, div, span</a></li>
+                        <li><a href="#!html/table.html" onclick="fetchPage('html/table.html')">table</a></li>
+                        <li><a href="#!html/form.html" onclick="fetchPage('html/form.html')">form, button</a></li>
+                        <li><a href="#!html/form_hidden.html" onclick="fetchPage('html/form_hidden.html')">hidden, label</a></li>
+                        <li><a href="#!html/method.html" onclick="fetchPage('html/method.html')">method, Upload</a></li>
+                        <li><a href="#!html/semantic.html" onclick="fetchPage('html/semantic.html')">semantic</a></li>
+                        <li><a href="#!html/searchEngine.html" onclick="fetchPage('html/searchEngine.html')">검색엔진 최적화</a></li>
+                        <li><a href="#!html/webtool.html" onclick="fetchPage('html/webtool.html')">웹 개발자 도구</a></li>
+                        <li><a href="#!html/newhtml5.html" onclick="fetchPage('html/newhtml5.html')">html5의 새로운 양식</a></li>    
                     </ol>
                 </li>
                 </div>
                 <div id="css_lib">
-                <li><a href="#!css/helloworld.html" class="corenavi_css">CSS</a>
+                <li class="corenavi_css">CSS
                     <ol id="css_library">
                         <li><a href="#!css/selector/selector.html"onclick="fetchPage('css/selector/selector.html')">선택자</a></li>
                         <li><a href="#!css/inheritance/inheritance.html"onclick="fetchPage('css/inheritance/inheritance.html')">상속, Cascading</a></li>
@@ -49,7 +49,7 @@
                 </li>
                 </div>
                 <div id="js_lib">
-                <li><a href="#!javascript/js.html" class="corenavi_js">javascript</a>
+                <li class="corenavi_js"> >javascript
                     <ol id="js_library">
                         <li><a href="#!javascript/number/number.html" onclick="fetchPage('javascript/number/number.html')">숫자와 문자, 변수, 연산자</a></li>
                         <li><a href="#!javascript/conditional/conditional.html" onclick="fetchPage('javascript/conditional/conditional.html')">조건문, 반복문</a></li>
@@ -67,7 +67,7 @@
         <div id="context_container">
             <article></article>
         </div>
-        <footer>
+        <footer class="feet">
             <p class="name">WonYoung_Yun</p>
         </footer>
     </div>
