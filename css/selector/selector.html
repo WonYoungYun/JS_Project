@@ -8,30 +8,28 @@
             color:red;
             text-decoration:underline
         }*/
-        ul li{
-            color:red;
-        }
+
         #lecture>li{
             border:1px solid red;
         }
-        ul,ol{
+        .back{
             background-color: powderblue;
         }
         #select{font-size:40px;
         }
-        a:visited{
+        #hyper:visited{
             color:red;
         }
-        a:link{
+        #hyper:link{
             color:black;
         }
-        a:hover{
+        #hyper:hover{
             color:yellow;
         }
-        a:active{
+        #hyper:active{
             color:green;
         }
-        a:focus{
+        #hyper:focus{
             background-color: black;
             color:white;
         }
@@ -39,9 +37,6 @@
     </style>
 </head>
 <body>
-<header>
-    <h1><a href="../../index.html">CSS</a></h1>
-</header>
 <section>
     <article>
         <h2>태그 선택자</h2>
@@ -55,7 +50,7 @@
     </article>
     <article>
         <h2>ID 선택자</h2>
-        <ul>
+        <ul class="back">
             <li>HTML</li>
             <li id="select">CSS</li>
             <li>JavaScript</li>
@@ -87,8 +82,8 @@
     </article>
     <article>
         <h2>가상 클래스 선택자</h2>
-        <a href="https://www.naver.com">방문함</a>
-        <a href="https://a.a">방문안함</a>
+        <a id="hyper" href="https://www.naver.com">방문함</a>
+        <a id="hyper" href="https://a.a">방문안함</a>
         <p>:active로 마우스를 클릭하고 있을때 효과 적용</p>
         <p>:hover로 마우스를 올려놓은 상태일때 효과 적용</p>
         <p>우선 순위는 아래에 있을수록 높다</p>

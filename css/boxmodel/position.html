@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <title>CSS</title>
     <style>
-        div{
-            border:5px solid tomato;
-            }
         #me{
+            border:5px solid tomato;
             position: relative;
             left:30px;
             top:10px;
         }
         #d{
+            border:5px solid tomato;
             position:relative;
         }
         #c{
+            border:5px solid tomato;
             background-color: black;
             color:white;
             position: absolute;
@@ -23,10 +23,8 @@
             top: 0px;
             width:100px;
         }
-        body{
-            padding-bottom:30px;
-        }
         #m{
+            border:5px solid tomato;
             background-color: black;
             color:white;
             position: fixed;
@@ -77,7 +75,7 @@
             <div id="o">other</div>
             <div id="p">
                 parent
-                <div id="m">me</div>
+                <div id="m"></div>
             </div>
             <p>fixed는 특정한 elemetn를 화면의 위치에 고정시켜서 스크롤로부터 완전히 독립되게 하는 것</p>
             <p>fixed한 element에 body가 가려지지 않게 하기위해 body에 padding을 준다.</p>
@@ -86,7 +84,7 @@
     </article>
 </section>
 <footer>
-    <a href="margin_collapsing.html">이전</a>
+    <a href="#!css/boxmodel/margin_collapsing.html" onclick="fetchPage('css/boxmodel/margin_collapsing.html')">이전</a>
 </footer>
 </body>
 </html>

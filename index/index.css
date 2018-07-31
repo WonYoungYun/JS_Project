@@ -1,4 +1,9 @@
-
+a{
+    text-decoration: none;
+}
+body{
+    padding-bottom: 30px;
+}
 
 header{
     border-bottom: 1px solid black;
