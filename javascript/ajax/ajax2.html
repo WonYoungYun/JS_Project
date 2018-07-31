@@ -6,19 +6,16 @@
 </head>
 <body>
 <div>
-    <header>
-        <h1><a href="../../index.html">JavaScript</a></h1>
-        <ol id="nav1">
-
-        </ol>
-    </header>
     <section>
         <h2>글목록 Ajax</h2>
         <input type="button" value="Click" onclick="fetchList()">
+        <ol id="nav1">
+
+        </ol>
     </section>
     <script>
         function fetchList(){
-            fetch('list').then(function(response){response.text().then(function(text){
+            fetch('javascript/ajax/list').then(function(response){response.text().then(function(text){
                 var items = text.split(',');
                 var i =0;
                 var tags ='';
@@ -37,7 +34,7 @@
 
     <p><a href="https://caniuse.com/" target="_blank">Can I Use</a></p>
     <footer>
-        <p><a href="..//js.html#!ajax/ajax.html">이전</a></p>
+        <p><a href="#!javascript/ajax/ajax.html" onclick="fetchPage('javascript/ajax/ajax.html')">이전</a></p>
     </footer>
 </div>
 </body>
