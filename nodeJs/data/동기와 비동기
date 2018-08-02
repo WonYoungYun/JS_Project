@@ -1,0 +1,7 @@
+
+fs.readFileSync(path, option)/동기적, 순차대로 실행(작업끝날 때 까지 대기)</br>
+<p>fs.readFile(path, option, callback)/비동기적, 작업이 끝난 후 실행</p>
+
+<p>readFile은 작업이 끝난 후 callback을 이용하여 다음 행동을 지정해 줄 수 있다.
+
+<p>javascript에서는 함수가 값이다.</p>

@@ -1,0 +1,9 @@
+Protocol - host(domain) - port - path - query string
+
+웹서버는 일반적으로 port80번을 이용
+path는 서버 컴퓨터에있는 어떤 디렉토리의 어떤 파일인지 알려준다.
+query string을 변경하면 웹서버에 데이터를 전달하고 결과를 돌려 받는다.
+시작은 ? 값과 값 사이는 & 값의 이름과 값은 =로 구분한다.
+
+
+CRUD  Create Read Update Delete
