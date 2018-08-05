@@ -18,7 +18,7 @@ module.exports = {
                         <textarea name = "description" placeholder="description">${description}</textarea>
                     </p>
                     <p>
-                        <input type="submit">
+                        <input class="btn btn-success" type="submit">
                     </p>
                     </form>
                     `,`<a href="/create">create</a> <a href="/update?id=${title}">update</a>`);

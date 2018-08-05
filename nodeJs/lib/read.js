@@ -11,7 +11,7 @@ module.exports = {
             var title = 'Welcome';
             var description = filelist;
             var list = template.list(filelist);
-            var html = template.html(title, list, `<h2>${title}</h2>${description}`, '<a href="/create">create</a>');
+            var html = template.html(title, list, `<h2>${title}</h2>${description}`, '<a class="btn btn-primary" href="/create" role="button">Create</a>');
             responsing.successed(html, response);
         })
     },
@@ -22,11 +22,11 @@ module.exports = {
               var title = queryData.id;
               var list = template.list(filelist);
               var html = template.html(title, list, `<h2>${title}</h2>${description}`,`
-              <a href="/create">create</a>
-              <a href="/update?id=${title}">update</a>
+              <a class="btn btn-primary" href="/create" role="button">Create</a>
+              <a class="btn btn-success" href="/update?id=${title}" role="button">Update</a>
               <form action="delete_process" method="post">
                 <input type="hidden" name="id" value="${title}">
-                <input type="submit" value="delete">
+                <input class="btn btn-danger" type="submit" value="Delete">
               </form>`
             );
                 responsing.successed(html, response);
