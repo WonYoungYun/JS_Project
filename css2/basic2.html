@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>basic2</title>
+    <style>
+        #wrap{
+            width:1000px;
+            height:100%;
+            margin:0 auto;
+            border:1px solid #cccccc;
+        }
+        #content1 p:nth-child(2n){
+            background-color: #ffffdf;
+        }
+        #content2 p:nth-child(2n){
+            background-color: #ffffdf;
+        }
+        #content1 p{
+            font-size:1.5rem;
+        }
+        #content{
+            width:70%;
+            height:500px;
+            margin:0 auto;
+            background-image: url(../html/images/dog.jpg);
+            font-size:2em;
+            color:#ffffff;
+            font-weight: bold;
+            text-align: center;
+        }
+        #content1, #content2 {
+            width:600px; margin:0 auto;
+            padding:20px;
+            border:1px solid #cccccc;
+            color:#333333;
+            font-weight: bold;
+            
+        }
+        #content1 p span{
+            display: block;
+            color:#087eef;
+            font-weight:normal;
+            font-size:50%;
+        }
+        #content2 p span{
+            display: block;
+            color:#087eef;
+            font-weight:normal;
+            font-size:16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content1">
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+        </div>
+        <div id="content2">
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+            <p>가나다라마바사아자차카타파하<span>2018-08-08</span></p>
+        </div>
+        <div id="content">
+            강아지
+        </div>
+    </div>
+</body>
+</html>

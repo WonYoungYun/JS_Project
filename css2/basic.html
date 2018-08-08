@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic</title>
+    <style>
+        #wrap{
+            width:800px;
+            margin: 0 auto;
+        }
+        header{
+            border-bottom: 1px solid #cccccc;
+        }
+
+        #history2::first-letter, #history1:first-letter{
+            font-size:2rem;
+        }
+        #history2::first-line, #history1:first-line{
+            font-weight: bold;
+            color:#2160d1;
+        }
+        #history2::selection{
+            background-color: blue;
+            color:yellow;
+        }
+        footer ul{
+            overflow:hidden;
+            border:2px solid #cccccc;
+        }
+        footer ul li {
+            list-style: none;
+            float:left;
+            padding:20px;
+        }
+        #content a::after{
+            content: '-' attr(href);
+        }
+        #content li:not(.fa) {
+            background-color: #ffd888;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>문자 선택자, 링크 선택자, 부정 선택자</h1>
+        </header>
+        <div>
+            <p>
+                가나다라마바사아자차카타파하
+            </p>
+            <p id="history2">
+                2018년 8월 8일<br/>서울 부산 대구 대전 광주
+            </p>
+            <p id="history1">
+                2018년 8월 9일<br/>광주 대전 대구 부산 서울
+            </p>
+            <ul id="content">
+                <li class="fa"><a href="https://www.naver.com" target="_blank">네이버</a></li>
+                <li><a href="https://www.daum.net" target="_blank">다음</a></li>
+            </ul>
+            <footer>
+                <ul>
+                    <li>이미지</li>
+                    <li>이미지</li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
