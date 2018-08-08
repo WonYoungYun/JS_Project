@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Display2</title>
+    <style>
+        body{
+            color:#3e3e3e;
+        }
+        
+        #content{
+            width: 810px;
+            margin: 0 auto;
+            background-color: #cccccc;
+            overflow: hidden;
+        }
+
+        #content div{
+            width: 250px;
+            float:left;
+            background-color: #ffffff;
+            margin:10px;
+            border-radius: 10px;
+        }
+
+        ul li{
+            list-style: none;
+        }
+        div p{
+            padding: 0 20px;
+            font-size: 1.5rem;
+        }
+        #boxsizing1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        #boxsizing2{
+            background-color:  green;
+            border:5px solid #dddddd;
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div>
+            <p>공지사항</p>
+            <ul>
+                <li>게시물01</li>
+                <li>게시물02</li>
+                <li>게시물03</li>
+                <li>게시물04</li>
+                <li>게시물05</li>
+            </ul>
+        </div>
+        <div>
+            <p>공지사항</p>
+            <ul>
+                <li>게시물11</li>
+                <li>게시물12</li>
+                <li>게시물13</li>
+                <li>게시물14</li>
+                <li>게시물15</li>
+            </ul>
+        </div>
+        <div>
+            <p>공지사항</p>
+            <ul>
+                <li>게시물21</li>
+                <li>게시물22</li>
+                <li>게시물23</li>
+                <li>게시물24</li>
+                <li>게시물25</li>
+            </ul>
+
+        </div>
+    </div>
+    <p style="text-align: center;">float:left를 주고 난 후 다음 밑에 따라오는 속성에도 float left속성이 따라 올 수 있기때문에 현재 감싸고 있는 태그에 overflow:hidden을 주면 해당 태그에만 left가 적용된다</p>
+
+    <div id="boxsizing1">box</div>
+    <div id="boxsizing2">box</div>
+</body>
+</html>

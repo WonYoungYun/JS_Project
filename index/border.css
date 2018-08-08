@@ -14,4 +14,20 @@
 .feet{
     background-color:white;
     border:1px solid black;
+    margin-bottom:30px;
+}
+
+#index_container{
+    width:300px;
+    height:100%;
+    float:left;
+    border-right:1px solid black;
+}
+
+#context_container{
+    width:770px;
+    border-left:1px solid black;
+    padding-left:20px;
+    margin-left:-1px;
+    float:left;
 }

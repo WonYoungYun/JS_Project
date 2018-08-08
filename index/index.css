@@ -2,7 +2,7 @@ a{
     text-decoration: none;
 }
 body{
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 header{
@@ -19,21 +19,6 @@ header{
     border-top:1px solid black;
     text-align:right;
     padding:10px;
-}
-
-#index_container{
-    width:300px;
-    height:100%;
-    float:left;
-    border-right:1px solid black;
-}
-
-#context_container{
-    width:770px;
-    border-left:1px solid black;
-    padding-left:20px;
-    margin-left:-1px;
-    float:left;
 }
 li{
     margin-top:3px;

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layout</title>
+    <style>
+        div, header, nav, footer{
+            border:1px solid #cccccc;
+            padding:5px; margin:5px;
+            text-align: center;
+        }
+        #con {
+            width: 800px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+        header{
+            width: 780px; height: 100px;
+            line-height: 100px;
+        }
+        nav{
+            width: 780px; height: 100px;
+        }
+
+        nav ul{
+            overflow: hidden;
+        }
+        nav ul li{
+            width: 138px; height: 40px;
+            line-height: 40px;
+            text-align: center;
+            list-style: none;
+            float: left;
+            border: 1px solid #dddddd;
+            background: #1e5799; /* Old browsers */
+            background: -moz-linear-gradient(top, #1e5799 16%, #2989d8 33%, #207cca 64%, #7db9e8 91%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #1e5799 16%,#2989d8 33%,#207cca 64%,#7db9e8 91%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #1e5799 16%,#2989d8 33%,#207cca 64%,#7db9e8 91%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+        }
+        #wrap{
+            width: 780px;
+            overflow: hidden;
+        }
+        #content{
+            width: 600px; height: 300px;
+            float: left;
+        }
+        #banner{
+            width:135px; height: 300px;
+            float: left;
+        }
+        footer{
+            width: 780px; height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <header>header</header>
+        <nav>
+            <p>navigation</p>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </nav>
+        <div id="wrap">
+            <div id="content">content
+                <p>그라데이션을 적용하기위한 사이트</p>
+                <p><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">www.colorzilla.com</a></p>
+
+            </div>
+            <div id="banner">banner</div>
+        </div>
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
