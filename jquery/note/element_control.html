@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>element control</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <style>
+        div {
+            border:2px blue solclass;
+            margin:2px;
+            padding:2px;
+        }
+        p {
+            background:yellow;
+            margin:2px;
+            padding:2px;
+        }
+        strong {
+            color:red;
+        }
+        .blue {
+        color:blue;
+        }
+        .highlight {
+        background:red;
+        }
+    </style>
+</head>
+<body>
+    <h2>자식, 형제로 삽입</h2>
+    <p>
+        I would like to say:
+    </p>
+    <script>
+        $("p").append("<strong>Hello</strong>");
+    </script>
+    <script>
+        $("p").after("<b>Hello</b>");
+    </script>
+    <h2>부모로 감싸기</h2>
+    <span>Span Text</span>
+    <strong>What about me?</strong>
+    <span>Another One</span>
+    <script>
+        $("span").wrap("<div><div><p><em><b></b></em></p></div></div>");
+    </script>
+    <h4>span을 wrap안의 태그들로 감싸 준다.</h4>
+    <h2>삭제</h2>
+    <div class="_remove">
+        <p >hello</p>
+        <p > how are </p>
+        <p >you?</p>
+    </div>
+    <button>Call remove()</button>
+    <script>
+        $("button").click(function(){
+            $("._remove").remove();
+        });
+    </script>
+    <h2>치환</h2>
+    <div class="_replace">
+        <p> Hello </p>
+        <p> World </p>
+    </div>
+    <script>
+        $("<b>Paragraph </b>").replaceAll("._replace");
+    </script>
+    <h4>특정한 코드를 만들어서 해당하는 곳에 치환한다.</h4>
+
+    <h2>class 제어</h2>
+    <p class="blue"> Click to toggle </p>
+    <p class="blue highlight"> highlight </p>
+    <p class="blue"> on these </p>
+    <p class="blue"> paragraphs </p>
+    <script>
+        $(".blue").click(function () {
+            $(this).toggleClass("highlight");
+        });
+    </script>
+    <h2>toggleClass로 highlight라는 인자를 전달</h2>
+
+    <h2>속성제어</h2>
+    <input type="text" value="some text" />
+    <p class="_control"></p>
+    <p>
+    </p>
+    <script>
+        $("input").keyup(function () {
+            var value = $(this).val();
+            $("._control").text(value);
+        }).keyup();
+    </script>
+    <h4>마지막에 keyup을 트리거로 실행하여 엘리먼트가 가지고 있는 이벤트 중에 keyup이라는 이벤트 명을 가지고 있는 이벤트 핸들러를 호출</h4>
+    <h4>초기값을 세팅해 줄때 주로 트리거를 사용한다.</h4>
+</body>
+</html>

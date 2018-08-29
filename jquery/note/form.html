@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+        p {
+            margin:0;
+            color:blue;
+        }
+        div, p {
+            margin-left:10px;
+        }
+        span {
+            color:red;
+        }
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>Form</h2>
+    <p>서버로 데이터를 전송하기 위한 수단.</p>
+    <p>
+        <input type="text" />
+        <span></span>
+    </p>
+    <script>
+        $("input").focus(function () {
+            $(this).next("span").html('focus');
+        }).blur(function () {
+            $(this).next("span").html('blur');
+        }).change(function (e) {
+            alert('change!! ' + $(e.target).val());
+        }).select(function () {
+            $(this).next('span').html('select');
+        });
+    </script>
+    <p>
+        Type 'correct' to validate.
+    </p>
+    <form action="javascript:alert('success!');">
+        <div>
+            <input class="correct" type="text" />
+
+            <input type="submit" />
+        </div>
+    </form>
+    <span class="fadeOut"></span>
+    <script>
+        $("form").submit(function () {
+            if ($(".correct").val() == "correct") {
+                $(".fadeOut").text("Validated...").show();
+                return true;
+            }
+            $(".fadeOut").text("Not valid!").show().fadeOut(1000);
+            return false;
+        });
+    </script>
+    <p>false를 반환하면 이벤트는 실행되지만 그 뒤의 이벤트인 submit이 발생하지 않는다.</p>
+</body>
+</html>

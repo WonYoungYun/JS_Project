@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>wrapper</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul>
+        <li>test2</li>
+    </ul>
+    <ul class="foo">
+        <li>test</li>
+    </ul>
+    <script>
+        (function($){            
+            $('ul.foo').click(function(){
+                $('li', this).css('background-color','red');
+            });
+        })(jQuery)
+            
+    $(document.body).css('background-color', 'gray')(jQuery);
+        /*(function($) => {
+            $('body').html('hello world <br/>');
+        })(jQuery)*/
+    </script>
+
+
+    wrapper는 엘리먼트 오브젝트나 css스타일 선택자<br/>
+    래퍼를 안전하게 사용하기 위해 
+
+    <p>제어대상을 지정하는 법 jQuery(selector, {context})</p>
+</body>
+</html>
+

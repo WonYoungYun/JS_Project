@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <input type="text" id="msg" />
+        <input type="button" value="get result" id="getResult" />
+        <script>
+            $('#getResult').click( function() {
+                $('#result').html('');
+                $.ajax({
+                    url:'./ajax.php',
+                    dataType:'json',
+                    type:'POST',
+                    data:{'msg':$('#msg').val()},
+                    success:function(result){
+                        if(result['result']==true){
+                          $('#result').html(result['msg']);
+                        }
+                    }
+                });
+            })
+        </script>
+        <h2>주요속성</h2>
+        <ul>
+            <li>data : 서버에 전송할 데이터, key/value 형식의 객체</li>
+            <li>dataType : 서버가 리턴하는 데이터 타입 (xml, json, script, html)</li>
+            <li>type : 서버로 전송하는 데이터의 타입 (POST, GET)</li>
+            <li>url : 데이터를 전송할 URL</li>
+            <li>success : ajax통신에 성공했을 때 호출될 이벤트 핸들러</li>
+        </ul>
+    </body>
+</html>

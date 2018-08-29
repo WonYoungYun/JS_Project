@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Event</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>Event</h2>
+    <p>크로스브라우징 문제를 해결해줌</p>
+    <p>on로 이벤트 핸들러 설치 off로 제거</p>
+    <p>trigger로 이벤트 강제 실행</p>
+    <p>click과 ready같이 다양한 이벤트 헬퍼 제공</p>
+    <p>On을 이용하면 현재 존재 하지 않는 엘리먼트에 이벤트 핸들러를 설치할 수 있음</p>
+    <script>
+        function clickHandler(e) {
+            alert('thanks');
+        }
+        $(document).ready(function(){
+            $('#click_me').on('click', clickHandler);
+            $('#remove_event').on('click', function(e){
+                $('#click_me').off('click', clickHandler);
+            });
+            $('#trigger_event').click( function(e){
+                $('#click_me').trigger('click');
+            })
+        })
+    </script>
+    <input id="click_me" type="button" value="click me"/>
+    <input type="button" value="unbind" id="remove_event"/>
+    <input type="button" value="trigger" id="trigger_event"/>
+    
+    <p>trigger는 click_me에 등록된 이벤트를 실행시켜준다.</p>
+</body>
+</html>
